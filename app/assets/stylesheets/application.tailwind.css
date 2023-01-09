@@ -34,4 +34,12 @@
   .table-data-primary {
     @apply border px-8 py-4
   }
+
+  .text-subheader1 {
+    @apply font-bold
+  }
+
+  .text-subheader2 {
+    @apply font-semibold
+  }
 }
