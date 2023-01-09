@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :users do
+    resources :sessions
+  end
+
   resources :products, only: [:index, :show]
 
   root "products#index"

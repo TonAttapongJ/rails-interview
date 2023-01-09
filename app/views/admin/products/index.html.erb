@@ -1,0 +1,34 @@
+<div class="w-full">
+    <div class="flex justify-between items-center mb-3">
+        <h1 class="font-bold text-4xl">Product</h1>
+        <%= link_to "New product", new_admin_product_path, class: "btn-primary" %>
+    </div>
+    <div id="products" class="min-w-full">
+    <table class="min-w-full">
+        <thead>
+            <tr>
+            <th class="table-header-primary">ID</th>
+            <th class="table-header-primary">Name</th>
+            <th class="table-header-primary">Description</th>
+            <th class="table-header-primary">Price</th>
+            <th class="table-header-primary">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @products.each do |product| %>
+                <tr>
+                    <td class="table-data-primary"><%= product.id%></td>  
+                    <td class="table-data-primary"><%= product.name%></td>  
+                    <td class="table-data-primary"><%= product.description%></td>  
+                    <td class="table-data-primary"><%= humanized_money_with_symbol product.price%></td>  
+                    <td class="table-data-primary">
+                    <%= link_to "Show", admin_product_path(product.id), class: "btn-primary" %>
+                    <%= link_to "Edit", admin_product_path(product.id), class: "btn-primary-outline" %>
+                    <%= link_to "Delete", product_path(product.id), class: "btn-secondary" %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+    </div>
+</div>
