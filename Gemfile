@@ -48,6 +48,12 @@ gem "bootsnap", require: false
 # Anoter gems
 gem 'money-rails', '~>1.12'
 
+# Use Devise
+gem "devise"
+
+# Use JWT
+gem "jwt"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
