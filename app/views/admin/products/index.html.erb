@@ -23,8 +23,8 @@
                     <td class="table-data-primary"><%= humanized_money_with_symbol product.price%></td>  
                     <td class="table-data-primary">
                     <%= link_to "Show", admin_product_path(product.id), class: "btn-primary" %>
-                    <%= link_to "Edit", admin_product_path(product.id), class: "btn-primary-outline" %>
-                    <%= link_to "Delete", product_path(product.id), class: "btn-secondary" %>
+                    <%= link_to "Edit", edit_admin_product_path(product.id), class: "btn-primary-outline" %>
+                    <%= link_to "Delete", admin_product_path(product.id), data: {turbo_method: :delete}, class: "btn-secondary" %>
                     </td>
                 </tr>
             <% end %>
